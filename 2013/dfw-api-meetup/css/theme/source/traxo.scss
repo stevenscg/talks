@@ -1,0 +1,77 @@
+/**
+ * Traxo theme for reveal.js.
+ *
+ * Copyright (C) Traxo
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Open Sans', sans-serif;
+$mainColor: #333;
+$headingFont: 'Quicksand', sans-serif;
+$headingColor: #333;
+$headingLetterSpacing: -0.08em;
+$headingTextShadow: none;
+$backgroundColor: #f7fbfc;
+$linkColor: #3b759e;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+// Fix links so they are not cut off
+.reveal a:not(.image) {
+	line-height: 1.3em;
+}
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( #add9e4, #f7fbfc );
+}
+
+// Custom image handler
+.reveal section img.unbordered {
+	border: none;
+	background: none;
+	box-shadow: none;
+	transition: none;
+}
+
+// Small image/figure captions
+.reveal figcaption, .reveal aside, .reveal caption {
+	font-size: 0.5 * $mainFontSize;
+}
+
+.reveal figcaption a {
+	font-size: 0.5 * $mainFontSize;
+}
+
+.reveal figcaption .roll {
+	vertical-align: middle;
+	overflow: none;
+	padding-bottom: 0.2em;
+}
+
+// lists
+.reveal ol, .reveal ul {
+	margin-top: 2em;
+}
+
+.reveal ul.undecorated li {
+	list-style-type: none;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

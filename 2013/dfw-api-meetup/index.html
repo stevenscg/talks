@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/theme/traxo.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -35,8 +35,8 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Pragmatic API Strategy</h2>
-					<h3>Traxo</h3>
+					<h2>Practical API Strategy</h2>
+					<h3>Tools and Techniques</h3>
 					<p>
 						<small><a href="http://chrisstevens.us">Chris Stevens</a> / <a href="http://twitter.com/stevenscg">@stevenscg</a></small>
 					</p>
@@ -54,7 +54,7 @@
 						<h2>Travel Industry</h2>
 						<p>Large, Entrenched, Traditional Suppliers.</p>
 						<p>Disruptive Newcomers.</p>
-						<p>NO APIs.</p>
+						<p>NO APIs</p>
 					</section>
 					<section>
 						<h2>Big Problems</h2>
@@ -68,16 +68,26 @@
 						<p>Multiple travel sites.</p>
 						<p>Stale information with limited portability.</p>
 					</section>
+					<section>
+						<h2>Itinerary Management</h2>
+						<p>Adding value for the Traveler</p>
+						<img src="assets/itinerary-landscape.png"/>
+					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>Traxo</h2>
-						<img src="assets/traxo_logo.png" />
-						<blockquote cite="http://techli.com/2011/07/traxo-the-mint-com-for-travel/">"The Mint.com for travel"</blockquote>
+						<img width="300" class="unbordered" src="assets/traxo_logo.png" />
 						<p>Comprehensive travel aggregator.</p>
 						<p>Deep travel industry experience.</p>
 						<p>5-yr Dallas "Startup".</p>
+						<figure>
+						<blockquote style="margin-top:2em;">
+						"The Mint.com for travel"
+						
+						<figcaption>Source: <a href="http://techli.com/2011/07/traxo-the-mint-com-for-travel/">TechLi.com</a></figcaption>
+						</blockquote>
+						</figure>
 					</section>
 					<section>
 						<h2>190 Travel Sources</h2>
@@ -88,7 +98,7 @@
 					</section>
 					<section>
 						<h2>Consumer Channels</h2>
-						<ul>
+						<ul class="undecorated">
 						<li>Website (2008)</li>
 						<li>Mobile Website (2010)</li>
 						<li>Calendar Feeds (2010)</li>
@@ -105,41 +115,60 @@
 					</section>
 
 					<section>
-						<h2>Proof of Concept - 2011</h2>
+						<h2>2011 - Proof of Concept</h2>
 						<p>A true "MVP".</p>
 						<p>A single CakePHP controller.</p>
 						<p>Attached to existing web application.</p>
-						<p>Manual api_key distribution.</p>
 						<p>Documentation on Google Sites.</p>
+						<p>Manual api_key distribution.</p>
+						<p>Not fun to work on.</p>
 						<p>Good enough.</p>
 					</section>
 
 					<section>
-						<h2>Product - Today</h2>
+						<h2>2012 - "Sales Tool"</h2>
+						<p>Light Development. Maintenance.</p>
+						<p>Added Versioning. Twice.</p>
+						<p>Structured Travel Intent Data.</p>
+						<p>Commercial Interest Growing.</p>
+						<p>Partnership Discussions.</p>
+						<p>Finally...Traction.</p>
+					</section>
+
+					<section>
+						<h2>Today - Product</h2>
 						<p>Dedicated codebase.</p>
-						<p>Tuned for API serving.</p>
 						<p>Shared Middleware Libraries.</p>
-						<p>OAuth2.</p>
-						<p>Self-service developer portal</p>
+						<p>Self-service developer portal.</p>
+						<p>OAuth2. 3Scale.</p>
+						<p>Tuned for API serving.</p>						
 					</section>
 
 					<section>
 						<h2>New Opportunities</h2>
 						<p>Commercialization. Monetization. Growth.</p>
 						<p>Mobile apps. Mashups.</p>
+						<figure>
+						<img width="200" src="assets/traxo-iphone-trip.png"/>
+						<img width="200" src="assets/traxo-iphone-programs.png"/>
+						</figure>
 					</section>
 
 					<section>
 						<h2>Partnerships</h2>
 						<img src="assets/traxo-sap-partner.jpg"/>
-						<blockquote cite="http://www.prnewswire.com/news-releases/traxo-travel-itinerary-solution-now-integrated-with-sap-cloud-for-travel-212300451.html">
+						<figure>
+						<blockquote>
 							"With the Traxo solution integrated with SAP Cloud for Travel, we expect our customers will have access to integrated travel itinerary and booking data in new ways – via a single channel," said Joe Fuster, senior vice president, Cloud, Customer and Money Line-of-Business Solutions, SAP.
 						</blockquote>
+						<figcaption>Source: PRNewswire - <a href="http://www.prnewswire.com/news-releases/traxo-travel-itinerary-solution-now-integrated-with-sap-cloud-for-travel-212300451.html">June 20, 2013</a></figcaption>
+						</figure>
 					</section>
 
 					<section>
 						<h2>Third-Party Integrations</h2>
-						<img src="assets/tripbridge-general-motors.png"/>
+						<p>General Motors In-Vehicle APIs</p>
+						<img width="80%" src="assets/tripbridge-general-motors.png"/>
 					</section>
 				</section>
 
@@ -147,6 +176,24 @@
 					<section>
 						<h1>API Strategy</h1>
 						<h2>A lot like flying...</h2>
+					</section>
+
+					<section>
+						<h2>Start With a Takeoff</h2>
+						<h4>V1: Accelerating. Still time to stop</h4>
+						<h4>V1+: People are depending on you</h4>
+						<!-- <img src="http://www.airplanedriver.net/acpix/accelgo.jpg"/> -->
+						<!-- <img width="55%" src="http://www.free-online-private-pilot-ground-school.com/images/minimum_required_runway.gif"/> -->
+						<img src="http://2.bp.blogspot.com/-9_F-UZn3D3Y/UCAa90sXXWI/AAAAAAAABE8/yNigwC86c2I/s1600/mins.gif"/>
+					</section>
+
+					<section>
+						<h2>All About The <strike>Journey</strike> Landing</h2>
+						<h4>Nobody Remembers the Takeoff</h4>
+						<figure>
+						<img src="http://www.aopa.org/-/media/Images/AOPA/Home/News/All%20News/2011/February/Understanding%20V1/0311v1.jpg?w=600&h=222&as=1"/>
+						<figcaption>Image Credit: <a href="http://www.aopa.org/News-and-Video/All-News/2011/February/1/Understanding-V1">AOPA - Understanding V1</a></figcaption>
+						</figure>
 					</section>
 
 					<section>
@@ -162,36 +209,46 @@
 					</section>
 
 					<section>
-						<h2>Know your Audience</h2>
-						<h4>You will discover new ones</h4>
-					</section>
-
-					<section>
 						<h2>Monetization</h2>
 						<h4></h4>
 					</section>
 
 					<section>
 						<h2>Support</h2>
-						<h4></h4>
+						<h4>High-Touch. Especially Enterprise Customers.</h4>
+						<h4>API Devs Recommended.</h4>
+						<figure>
+						<img width="60%" src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg"/>
+						<figcaption>Image Credit: <a href="http://commons.wikimedia.org/wiki/File:Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg">WikiMedia</a></figcaption>
+						</figure>
 					</section>
 
 					<section>
 						<h2>Measure Everything</h2>
-						<h4></h4>
+						<h4>In-House. Outsource. Use What Works.</h4>
+						<h4>Just Do It. From The Beginning.</h4>
+						<figure>
+						<img src="http://etsycodeascraft.files.wordpress.com/2011/02/login_fails2.png?w=500&h=300"/>
+						<figcaption>Image Credit: <a href="http://codeascraft.com/2011/02/15/measure-anything-measure-everything/">Etsy - Measure Anything. Measure Everything.</a></figcaption>
+						</figure>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h1>Lessons Learned</h1>
-						<h4>From 5 years of bootstrapping</h4>
+						<h4 class="fragment">From 5 years of bootstrapping</h4>
+						<h4 class="fragment">In the travel industry</h4>
 					</section>
 
 					<section>
 						<h2>Frameworks</h2>
 						<h4>Use what works for you</h4>
-
+						<ul>
+							<li class="fragment">What are you using already?</li>
+							<li class="fragment">Node.js</li>
+							<li class="fragment">API micro-frameworks (Slim for PHP)</li>
+						</ul>
 					</section>
 
 					<section>
