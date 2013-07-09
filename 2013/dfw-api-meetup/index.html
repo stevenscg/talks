@@ -180,11 +180,14 @@
 
 					<section>
 						<h2>Start With a Takeoff</h2>
-						<h4>V1: Accelerating. Still time to stop</h4>
-						<h4>V1+: People are depending on you</h4>
-						<!-- <img src="http://www.airplanedriver.net/acpix/accelgo.jpg"/> -->
+						<h4>V1: Accelerating. Still time to stop.</h4>
+						<h4>V1+: People are depending on you.</h4>
+						<figure>
+						<img src="http://www.airplanedriver.net/acpix/accelgo.jpg"/>
 						<!-- <img width="55%" src="http://www.free-online-private-pilot-ground-school.com/images/minimum_required_runway.gif"/> -->
-						<img src="http://2.bp.blogspot.com/-9_F-UZn3D3Y/UCAa90sXXWI/AAAAAAAABE8/yNigwC86c2I/s1600/mins.gif"/>
+						<!-- <img src="http://2.bp.blogspot.com/-9_F-UZn3D3Y/UCAa90sXXWI/AAAAAAAABE8/yNigwC86c2I/s1600/mins.gif"/> -->
+						<figcaption>Image Source: <a href="">Airplanedriver.net</a></figcaption>
+						</figure>
 					</section>
 
 					<section>
@@ -209,17 +212,12 @@
 					</section>
 
 					<section>
-						<h2>Monetization</h2>
-						<h4></h4>
-					</section>
-
-					<section>
 						<h2>Support</h2>
 						<h4>High-Touch. Especially Enterprise Customers.</h4>
 						<h4>API Devs Recommended.</h4>
 						<figure>
 						<img width="60%" src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg"/>
-						<figcaption>Image Credit: <a href="http://commons.wikimedia.org/wiki/File:Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg">WikiMedia</a></figcaption>
+						<figcaption>Image Credit: <a href="http://commons.wikimedia.org/wiki/File:Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg">WikiMedia - CV-22 Osprey</a></figcaption>
 						</figure>
 					</section>
 
@@ -242,48 +240,240 @@
 					</section>
 
 					<section>
-						<h2>Frameworks</h2>
-						<h4>Use what works for you</h4>
-						<ul>
-							<li class="fragment">What are you using already?</li>
-							<li class="fragment">Node.js</li>
-							<li class="fragment">API micro-frameworks (Slim for PHP)</li>
+						<h2>Infrastructure</h2>
+						<ul class="page-block">
+							<li>Pick the right web server (Nginx)</li>
+							<li>Really great PaaS options:
+								<ul>
+								<li>Parse, OpenShift, Appcelerator Cloud</li>
+								</ul>
+							</li>
+							<li>Separate from the beginning (api.domain.com)</li>
 						</ul>
 					</section>
 
 					<section>
-						<h2>Infrastructure</h2>
-						<h4></h4>
+						<h2>Frameworks</h2>
+						<h4>Use what works for you</h4>
+						<ul class="page-block">
+							<li>What are you using already?</li>
+							<li>Node.js</li>
+							<li>API micro-frameworks (Slim for PHP)</li>
+						</ul>
 					</section>
 
 					<section>
 						<h2>Code</h2>
 						<h4></h4>
+						<ul class="page-block">
+							<li>Organization
+								<ul>
+								<li>Single controller fine for PoC</li>
+								<li>Dedicated codebase recommended</li>
+								</ul>
+							</li>
+							<li>Shared Components
+							<ul>
+								<li>Middleware: Model definitions, etc</li>
+								<li>Restrict and package fields from the ORM</li>
+								</ul>
+							</li>
+							<li>Date/Times
+								<ul>
+								<li>Use ISO8601. Always. Everywhere.</li>
+								</ul>
+							</li>
+							<li>Testing
+								<ul>
+								<li>Unit. Integration.</li>
+								<li>Write a simple mobile app against your API (Titanium)</li>
+								</ul>
+							</li>
+						</ul>
 					</section>
 
 					<section>
 						<h2>Versioning</h2>
-						<h4></h4>
+						<h4>Twice. So Far.</h4>
+						<ul class="page-block">
+							<li>Initially, used a vendor media type via header
+								<ul>
+								<li><a href="http://tools.ietf.org/html/rfc4288#section-3.2">RFC 4288 Section 3.2</a></li>
+								</ul>
+							</li>
+							<li>Now, via url (api.domain.com/v1/{endpoint})
+								<ul>
+								<li>Harder for devs to overlook</li>
+								<li>Works great with CakePHP prefix routing</li>
+								</ul>
+							</li>
+							<li>Version Policy
+								<ul>
+								<li>Free to add response fields will retaining backwards compatibility</li>
+								<li>"Experimental" fields - marked with leading underscore</li>
+								<li>"Flex" Version concept: <a href="https://developer.flightstats.com/api-docs/version_policy">FlightStats API</a></li>
+								</ul>
+							</li>
+							<li>End-of-life notice, target 6 months</li>
+						</ul>
 					</section>
 
 					<section>
-						<h2>OAuth</h2>
-						<h4></h4>
+						<h2>OAuth 2</h2>
+						<h4>Protect your user's credentials</h4>
+						<ul class="page-block">
+							<li>Know the specs: <a href="http://tools.ietf.org/html/rfc6749">RFC6749</a></li>
+							<li>We are <a href="">Draft 20</a> plus:
+								<ul>
+								<li>Redirect URI enforcement</li>
+								<li>State Parameter enforcement</li>
+								</ul>
+							</li>
+							<li>Use a library - <a href="https://github.com/quizlet/oauth2-php">oauth2-php</a></li>
+							<li>Don't deviate from the Spec
+								<ul>
+								<li>Some of the biggest implementations are non-conforming</li>
+								</ul>
+							</li>
+							<li>Increased speed for partner on-boarding</li>
+						</ul>
 					</section>
-
 				</section>
 
 				<section>
 					<section>
 						<h1>Measure Everything</h1>
-						<h2></h2>
+						<h4>Measure Anything.</h4>
+						<figure>
+							<blockquote>
+								"If it moves, we track it. Sometimes we’ll draw a graph of something that isn’t moving yet, just in case it decides to make a run for it." - Engineering at Etsy
+								<figcaption><a href="http://codeascraft.com/2011/02/15/measure-anything-measure-everything/">http://codeascraft.com/2011/02/15/measure-anything-measure-everything/</a></figcaption>
+							</blockquote>
+
+						</figure>
+					</section>
+					<section>
+						<h2>Open Source Tooling</h2>
+						<h4>Measure Anything. For "Free".</h4>
+						<ul class="page-block">
+							<li>Collection / Aggregation
+								<ul>
+								<li><a href="http://graphite.wikidot.com/">Graphite/Carbon</a>, <a href="https://github.com/etsy/statsd/">StatsD</a>, <a href="http://collectd.org/">CollectD</a>, <a href="https://github.com/etsy/logster">Logster</a></li>
+								</ul>
+							</li>
+							<li>Visualization
+								<ul>
+								<li><a href="https://github.com/obfuscurity/descartes">Descartes</a>, <a href="http://shopify.github.io/dashing/">Dashing</a>, <a href="http://dev.paperlesspost.com/blog/2011/12/16/introducing-graphiti-an-alternate-frontend-for-graphite/">Graphiti</a>, <a href="https://github.com/obfuscurity/tasseo">Tasseo</a></li>
+								</ul>
+							</li>
+							<li>Infrastructure, apps, business
+								<ul>
+								<li>~10,000 metrics</li>
+								<li>Trivial to measure anything</li>
+								</ul>
+							</li>
+							<li>Retentions
+								<ul>
+									<li>Apps: 10 seconds - 10 minutes. 5 years</li>
+									<li>Servers: 60 seconds - 15 minutes. 10 years</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Examples: Descartes</h2>
+						<h4>Large-Format Information Radiators</h4>
+						<figure>
+							<img src="https://raw.github.com/obfuscurity/descartes/master/lib/descartes/public/img/descartes.png"/>
+							<figcaption>Image Source: <a href="https://github.com/obfuscurity/descartes">Descartes on Github</a></figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Examples: Dashing</h2>
+						<h4>Large-Format Information Radiators</h4>
+						<figure>
+							<img width="90%" src="http://cdn.codevisually.com/wp-content/uploads/2012/11/codevisually_02a_large.jpg"/>							
+							<figcaption>Image Source: <a href="http://codevisually.com/dashing-an-exceptionally-handsome-dashboard-framework/">CodeVisually.com</a> / <a href="http://dashingdemo.herokuapp.com/sample">Live Demo</a></figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Examples: Tasseo</h2>
+						<h4>Large-Format Information Radiators</h4>
+						<figure>
+							<img src="https://raw.github.com/obfuscurity/tasseo/master/lib/tasseo/public/i/tasseo.png"/>
+							<figcaption>Image Source: <a href="https://github.com/obfuscurity/tasseo">Tasseo on Github</a></figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Examples: Graphiti</h2>
+						<h4>Desktop Viewing.</h4>
+						<figure>
+							<img width="65%" class="unbordered" src="http://quirkey.com/skitch/Graphiti-20111215-161836.png"/>
+							<figcaption>Image Source: <a href="http://dev.paperlesspost.com/blog/2011/12/16/introducing-graphiti-an-alternate-frontend-for-graphite/">Paperless Post</a></figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Metrics as a Service</h2>
+						<h4>Measure Anything. Not Quite "Free".</h4>
+						<ul class="page-block">
+							<li>Providers
+								<ul>
+								<li>NewRelic</li>
+								<li>HostedGraphite</li>
+								<li>Gaug.es</li>
+								<li>Segment.io</li>
+								</ul>
+							</li>
+							<li>Great way to get started</li>
+							<li>Minimal upfront investment</li>
+						</ul>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h1>3Scale</h1>
-						<h2></h2>
+						<h4>Flexible API Management</h4>
+					</section>
+					<section>
+						<h2>Features</h2>
+						<ul class="page-block">
+							<li>Generous Free Tier</li>
+							<li>Developer Portal</li>
+							<li>Authorization and Rate-Limiting</li>
+							<li>Open-Source Proxy Support</li>
+							<li>Integration SDKs</li>
+							<li>API Plans / Tiers</li>
+							<li>Metrics</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Developer Relations</h2>
+						<h4></h4>
+						<ul class="page-block">
+							<li>Developer Portal / On-boarding</li>
+							<li>Swagger Active Docs</li>
+							<li>Client Management</li>
+							<li>Metrics</li>
+						</ul>
+					</section>
+					<section>
+						<h2>SDK Integration</h2>
+						<h4></h4>
+						<ul class="page-block">
+							<li>SDKs for most languages</li>
+							<li>Authorize</li>
+							<li>Report Metrics</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Proxy Support</h2>
+						<h4>Nginx</h4>
+						<ul class="page-block">
+							<li>OAuth Coming Soon!</li>
+							<li>Threaded</li>
+
+						</ul>
 					</section>
 				</section>
 

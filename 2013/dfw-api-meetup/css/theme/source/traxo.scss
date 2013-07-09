@@ -63,12 +63,20 @@ $selectionBackgroundColor: #134674;
 }
 
 // lists
-.reveal ol, .reveal ul {
+.reveal ol.page-block, .reveal ul.page-block {
 	margin-top: 2em;
 }
 
 .reveal ul.undecorated li {
 	list-style-type: none;
+}
+
+.reveal li li {
+	font-size: 80%
+}
+
+.reveal li li li {
+	font-size: 60%
 }
 
 
