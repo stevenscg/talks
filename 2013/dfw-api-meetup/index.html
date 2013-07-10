@@ -37,16 +37,18 @@
 				<section>
 					<h2>Practical API Strategy</h2>
 					<h3>Tools and Techniques</h3>
-					<p>
-						<small><a href="http://chrisstevens.us">Chris Stevens</a> / <a href="http://twitter.com/stevenscg">@stevenscg</a></small>
-					</p>
+					<div style="margin-top:3em">
+						<p><a href="http://chrisstevens.us">Chris Stevens</a> / <a href="http://twitter.com/stevenscg">@stevenscg</a></p>
+						<p>DFW API Professionals Meetup</p>
+						<p>July 11, 2013</p>
+					</div>
 				</section>
 
 				<section>
 					<h2>Chris Stevens</h2>
 					<p>Engineering and Operations @Traxo</p>
 					<p>Engineer / Developer / Consultant</p>
-					<p>Pilot</p>
+					<p>Pilot / Texas A&M Class of 1998</p>
 				</section>
 
 				<section>
@@ -149,8 +151,8 @@
 						<p>Commercialization. Monetization. Growth.</p>
 						<p>Mobile apps. Mashups.</p>
 						<figure>
-						<img width="200" src="assets/traxo-iphone-trip.png"/>
-						<img width="200" src="assets/traxo-iphone-programs.png"/>
+						<img width="250" src="assets/traxo-iphone-trip.png"/>
+						<img width="250" src="assets/traxo-iphone-programs.png"/>
 						</figure>
 					</section>
 
@@ -160,8 +162,8 @@
 						<figure>
 						<blockquote>
 							"With the Traxo solution integrated with SAP Cloud for Travel, we expect our customers will have access to integrated travel itinerary and booking data in new ways – via a single channel," said Joe Fuster, senior vice president, Cloud, Customer and Money Line-of-Business Solutions, SAP.
+							<figcaption>Source: PRNewswire - <a href="http://www.prnewswire.com/news-releases/traxo-travel-itinerary-solution-now-integrated-with-sap-cloud-for-travel-212300451.html">June 20, 2013</a></figcaption>
 						</blockquote>
-						<figcaption>Source: PRNewswire - <a href="http://www.prnewswire.com/news-releases/traxo-travel-itinerary-solution-now-integrated-with-sap-cloud-for-travel-212300451.html">June 20, 2013</a></figcaption>
 						</figure>
 					</section>
 
@@ -202,13 +204,19 @@
 					<section>
 						<h2>Planning is Important</h2>
 						<h4>But just get started</h4>
-						<img src="http://farm8.staticflickr.com/7337/8797991705_79b4e94c8a_d.jpg"/>
+						<figure>
+						<img width="50%" src="http://farm8.staticflickr.com/7337/8797991705_79b4e94c8a_d.jpg"/>
+						<figcaption>DFW to Denver for Gluecon 2013</figcaption>
+						</figure>
 					</section>
 
 					<section>
 						<h2>Many Routes</h2>
 						<h4>Pick one that supports your business</h4>
-						<img src="http://farm8.staticflickr.com/7388/8808575422_527e21994b_d.jpg"/>
+						<figure>
+						<img width="45%" src="http://farm8.staticflickr.com/7388/8808575422_527e21994b_d.jpg"/>
+						<figcaption>DFW to Denver for Gluecon 2013</figcaption>
+						</figure>
 					</section>
 
 					<section>
@@ -216,7 +224,7 @@
 						<h4>High-Touch. Especially Enterprise Customers.</h4>
 						<h4>API Devs Recommended.</h4>
 						<figure>
-						<img width="60%" src="http://upload.wikimedia.org/wikipedia/commons/8/8c/Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg"/>
+						<img width="60%" src="assets/cv22-refueling.jpg"/>
 						<figcaption>Image Credit: <a href="http://commons.wikimedia.org/wiki/File:Defense.gov_News_Photo_120104-F-NI784-981_-_A_71st_Special_Operations_Squadron_CV-22_Osprey_receives_fuel_from_a_522nd_Special_Operation_Squadron_MC-130J_Combat_Shadow_II_over_New_Mexico_on.jpg">WikiMedia - CV-22 Osprey</a></figcaption>
 						</figure>
 					</section>
@@ -226,7 +234,7 @@
 						<h4>In-House. Outsource. Use What Works.</h4>
 						<h4>Just Do It. From The Beginning.</h4>
 						<figure>
-						<img src="http://etsycodeascraft.files.wordpress.com/2011/02/login_fails2.png?w=500&h=300"/>
+						<img src="assets/etsy-login-fails2.png"/>
 						<figcaption>Image Credit: <a href="http://codeascraft.com/2011/02/15/measure-anything-measure-everything/">Etsy - Measure Anything. Measure Everything.</a></figcaption>
 						</figure>
 					</section>
@@ -242,13 +250,24 @@
 					<section>
 						<h2>Infrastructure</h2>
 						<ul class="page-block">
-							<li>Pick the right web server (Nginx)</li>
-							<li>Really great PaaS options:
+							<li>In-house
 								<ul>
-								<li>Parse, OpenShift, Appcelerator Cloud</li>
+								<li>Pick the right server solution (Nginx)</li>
+								<li>Caching tier (Memcached, Couchbase, Varnish)
 								</ul>
 							</li>
-							<li>Separate from the beginning (api.domain.com)</li>
+							<li>Really great PaaS options:
+								<ul>
+								<li>Parse, OpenShift, Heroku, Appcelerator Cloud</li>
+								</ul>
+							</li>
+							<li>Dedicated host/infrastructure
+								<ul>
+								<li>api.domain.com</li>
+								<li>From the beginning</li>
+								<li>Isolate and optimize</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 
@@ -268,7 +287,7 @@
 						<ul class="page-block">
 							<li>Organization
 								<ul>
-								<li>Single controller fine for PoC</li>
+								<li>Single controller fine for proof of concept</li>
 								<li>Dedicated codebase recommended</li>
 								</ul>
 							</li>
@@ -286,7 +305,8 @@
 							<li>Testing
 								<ul>
 								<li>Unit. Integration.</li>
-								<li>Write a simple mobile app against your API (Titanium)</li>
+								<li>Write a simple mobile app against your API (<a href="http://www.appcelerator.com/developers/">Titanium</a>)</li>
+								<li>We did: <a href="http://bit.ly/TripBridge-iOS">TripBridge for iOS</a> / <a href="http://bit.ly/TripBridge-Android">TripBridge for Android</a>
 								</ul>
 							</li>
 						</ul>
@@ -309,12 +329,17 @@
 							</li>
 							<li>Version Policy
 								<ul>
-								<li>Free to add response fields will retaining backwards compatibility</li>
+								<li>Free to add response fields while retaining backwards compatibility</li>
 								<li>"Experimental" fields - marked with leading underscore</li>
 								<li>"Flex" Version concept: <a href="https://developer.flightstats.com/api-docs/version_policy">FlightStats API</a></li>
 								</ul>
 							</li>
-							<li>End-of-life notice, target 6 months</li>
+							<li>End-of-life notice
+								<ul>
+								<li>Minimum of 6 months</li>
+								<li>Watch your stats</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 
@@ -322,17 +347,22 @@
 						<h2>OAuth 2</h2>
 						<h4>Protect your user's credentials</h4>
 						<ul class="page-block">
-							<li>Know the specs: <a href="http://tools.ietf.org/html/rfc6749">RFC6749</a></li>
-							<li>We are <a href="">Draft 20</a> plus:
+							<li>Know the Spec: <a href="http://tools.ietf.org/html/rfc6749">RFC6749</a></li>
+							<li>We are <a href="">Draft 20</a> plus
 								<ul>
 								<li>Redirect URI enforcement</li>
 								<li>State Parameter enforcement</li>
 								</ul>
 							</li>
-							<li>Use a library - <a href="https://github.com/quizlet/oauth2-php">oauth2-php</a></li>
+							<li>Use a library
+								<ul>
+								<li><a href="https://github.com/quizlet/oauth2-php">oauth2-php</a></li>
+								</ul>
+							</li>
 							<li>Don't deviate from the Spec
 								<ul>
 								<li>Some of the biggest implementations are non-conforming</li>
+								<li>Decide what is best for your business. Hold your ground.</li>
 								</ul>
 							</li>
 							<li>Increased speed for partner on-boarding</li>
@@ -381,34 +411,34 @@
 						</ul>
 					</section>
 					<section>
-						<h2>Examples: Descartes</h2>
-						<h4>Large-Format Information Radiators</h4>
-						<figure>
-							<img src="https://raw.github.com/obfuscurity/descartes/master/lib/descartes/public/img/descartes.png"/>
-							<figcaption>Image Source: <a href="https://github.com/obfuscurity/descartes">Descartes on Github</a></figcaption>
-						</figure>
-					</section>
-					<section>
 						<h2>Examples: Dashing</h2>
 						<h4>Large-Format Information Radiators</h4>
 						<figure>
-							<img width="90%" src="http://cdn.codevisually.com/wp-content/uploads/2012/11/codevisually_02a_large.jpg"/>							
+							<img width="90%" src="assets/dashing-large.jpg"/>							
 							<figcaption>Image Source: <a href="http://codevisually.com/dashing-an-exceptionally-handsome-dashboard-framework/">CodeVisually.com</a> / <a href="http://dashingdemo.herokuapp.com/sample">Live Demo</a></figcaption>
 						</figure>
 					</section>
 					<section>
-						<h2>Examples: Tasseo</h2>
-						<h4>Large-Format Information Radiators</h4>
+						<h2>Examples: Descartes</h2>
+						<h4>Large-Format. Desktop / Collaboration</h4>
 						<figure>
-							<img src="https://raw.github.com/obfuscurity/tasseo/master/lib/tasseo/public/i/tasseo.png"/>
+							<img src="assets/descartes.png"/>
+							<figcaption>Image Source: <a href="https://github.com/obfuscurity/descartes">Descartes on Github</a></figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Examples: Tasseo</h2>
+						<h4>Large-Format. Desktop / Collaboration</h4>
+						<figure>
+							<img src="assets/tasseo.png"/>
 							<figcaption>Image Source: <a href="https://github.com/obfuscurity/tasseo">Tasseo on Github</a></figcaption>
 						</figure>
 					</section>
 					<section>
 						<h2>Examples: Graphiti</h2>
-						<h4>Desktop Viewing.</h4>
+						<h4>Desktop Viewing. Collaboration.</h4>
 						<figure>
-							<img width="65%" class="unbordered" src="http://quirkey.com/skitch/Graphiti-20111215-161836.png"/>
+							<img width="65%" class="unbordered" src="assets/graphiti.png"/>
 							<figcaption>Image Source: <a href="http://dev.paperlesspost.com/blog/2011/12/16/introducing-graphiti-an-alternate-frontend-for-graphite/">Paperless Post</a></figcaption>
 						</figure>
 					</section>
@@ -418,7 +448,7 @@
 						<ul class="page-block">
 							<li>Providers
 								<ul>
-								<li>NewRelic</li>
+								<li>New Relic</li>
 								<li>HostedGraphite</li>
 								<li>Gaug.es</li>
 								<li>Segment.io</li>
@@ -426,6 +456,7 @@
 							</li>
 							<li>Great way to get started</li>
 							<li>Minimal upfront investment</li>
+							<li>Excellent interfaces (typically)</li>
 						</ul>
 					</section>
 				</section>
@@ -438,30 +469,56 @@
 					<section>
 						<h2>Features</h2>
 						<ul class="page-block">
+							<li>Out-of-band Solution</li>
 							<li>Generous Free Tier</li>
 							<li>Developer Portal</li>
 							<li>Authorization and Rate-Limiting</li>
-							<li>Open-Source Proxy Support</li>
+							<li>Strong Open-Source Support</li>
 							<li>Integration SDKs</li>
 							<li>API Plans / Tiers</li>
-							<li>Metrics</li>
+							<li>Billing System</li>
+							<li>Metrics
+								<ul>
+								<li>For the developer</li>
+								<li>For the provider</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Developer Relations</h2>
-						<h4></h4>
 						<ul class="page-block">
 							<li>Developer Portal / On-boarding</li>
-							<li>Swagger Active Docs</li>
-							<li>Client Management</li>
-							<li>Metrics</li>
+							<li>Swagger Active Docs
+								<ul>
+								<li>Example: <a href="http://www.3scale.net/2012/01/interactive-api-documentation-the-new-api-console-for-developers/">API Console for Developers</a></li>
+								<li>Kin Lane's <a href="http://apievangelist.com/2011/11/09/can-swagger-deliver-a-restful-api-discovery-service/">Analysis of Swagger</a></li>
+								</ul>
+							</li>
+							<li>Client code (SDK) for your API</li>
+							<li>Client Management
+								<ul>
+								<li>Enable/Disable per application (clientId)</li>
+								<li>Set quotas and alerts</li>
+								</ul>
+							</li>
+							<li>Metrics
+								<ul>
+								<li>Simple hit tracking</li>
+								<li>Per-endpoint or as desired</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 					<section>
 						<h2>SDK Integration</h2>
-						<h4></h4>
 						<ul class="page-block">
-							<li>SDKs for most languages</li>
+							<li>SDKs for most languages
+								<ul>
+								<li>Open-source</li>
+								<li><a href="https://support.3scale.net/libraries">https://support.3scale.net/libraries</a></li>
+								</ul>
+							</li>
 							<li>Authorize</li>
 							<li>Report Metrics</li>
 						</ul>
@@ -470,18 +527,41 @@
 						<h2>Proxy Support</h2>
 						<h4>Nginx</h4>
 						<ul class="page-block">
-							<li>OAuth Coming Soon!</li>
-							<li>Threaded</li>
-
+							<li>Best-in-class web server + 3Scale module</li>
+							<li>Authorization, tracking, and rate-limiting</li>
+							<li>Reduces calls to 3Scale API</li>
+							<li>Reduces calls to your backend</li>
+							<li>OAuth Support now in Beta!</li>
 						</ul>
 					</section>
 				</section>
 
 				<section>
+					<h1>Wrap Up</h1>
+					<figure>
+					<blockquote>
+						"Developers are the new Kingmakers"
+						<figcaption>- Gluecon 2013 - Steven O'Grady - Redmonk</figcaption>
+					</blockquote>
+					<blockquote>
+						"Everything is an auto-scaling group"
+						<figcaption>- Gluecon 2013 - Everybody @Netflix</figcaption>
+					</blockquote>
+					<blockquote>
+						"When clouds fight, we all win"
+						<figcaption>- Gluecon 2013 - Adrian Cockcroft @adrianco / @Netflix</figcaption>
+					</blockquote>
+					</figure>
+				</section>
+
+				<section>
 					<h1>Questions?</h1>
-					<div style="margin-top:5em;">
-						<p>Twitter: @stevenscg</p>
-						<p>Github: @stevenscg</p>
+					<h4>The pilot has turned off the seatbelt sign</h4>
+					<img width="25%" src="assets/seatbelt_sign.jpg"/>
+					<div>
+						<p><a href="http://chrisstevens.us">http://chrisstevens.us</a></p>
+						<p>Twitter: <a href="https://twitter.com/stevenscg">@stevenscg</a></p>
+						<p>Github: <a href="https://github.com/stevenscg">@stevenscg</a></p>
 					</div>
 				</section>
 
